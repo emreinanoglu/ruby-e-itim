@@ -20,6 +20,18 @@
     end
 =end
 
+if true 
+    puts "Merhaba"
+else
+    puts "Baysss"
+end
+
+if !true 
+    puts "Merhaba"
+else
+    puts "Baysss"
+end
+
 # Örnek uygulama not sistemi
 # not 0  -  24     arası   0
 # not 25 -  44     arası   1
