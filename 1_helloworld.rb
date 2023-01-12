@@ -8,7 +8,7 @@ soyad ="inanoglu"
 puts ad
 # puts' kısaltması olarak p kullanılabilir
 p "Eğitimin yaşı olmaz"
-p ad + " " + soyad
+p ad + "  " + soyad
 # tek tırnak ile yazılırsa içinde ne varsa ekrana yazar
 puts 'Benim adım #{ad} soyadım #{soyad}'
 puts "Benim adım #{ad} soyadım #{soyad}"
