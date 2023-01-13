@@ -1,4 +1,15 @@
-# üyelerimizin kullanıcı adı ve şifrelerin saklandığı dizi
+# Kullanıcı adı ve şifre ile login yapan uygulama
+
+# Login Sayfasına hoş geldiniz!
+# -------------------------
+
+# Kullanıcı Adı:
+# Şifre:
+# Kullanıcı adı ya da şifre hatalı
+# Çıkmak için n ya da devam etmek için herhangi bir tuşa basınız:
+
+
+# Üyelerimizin kullanıcı adı ve şifrelerin saklandığı dizi
 uyeler = [
     {username: "engindemir", password: "123456"},
     {username: "emreinan", password: "123456"},
@@ -6,7 +17,7 @@ uyeler = [
     {username: "kartal", password: "123456"},
 ]
 
-def auth_login(username, password, uye_listesi)
+def login_giris_kontrol(username, password, uye_listesi)
     uye_listesi.each do |uye_bak|
         if uye_bak[:username] == username && uye_bak[:password] == password
             return uye_bak
@@ -15,7 +26,7 @@ def auth_login(username, password, uye_listesi)
     "Kullanıcı adı ya da şifre hatalı"
 end
 
-#kullanıcı adı ve şifre ile giriş yapması isteniyor
+# Kullanıcı adı ve şifre ile giriş yapması isteniyor
 puts "Login Sayfasına hoş geldiniz!"
 25.times { print "-"}
 puts
@@ -27,9 +38,9 @@ while giris_deneme < 4
     username = gets.chomp
     print "Şifre: "
     password = gets.chomp
-    login_kontrol = auth_login(username, password, uyeler)
+    login_kontrol = login_giris_kontrol(username, password, uyeler)
     puts login_kontrol
-    puts "Çıkmak için n ya da devam etmek için enter tuşuna basınız: "
+    puts "Çıkmak için n ya da devam etmek için herhangi bir tuşa basınız: "
     input = gets.chomp.downcase
     break if input == "n"
     giris_deneme += 1
