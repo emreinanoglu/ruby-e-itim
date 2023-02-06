@@ -22,123 +22,114 @@
     puts 3.chr
 =end
 # .div kalansız bölünme
-# =begin
+=begin
     puts 6.div(5)
-# =end
-# .clear metni temizler
-=begin
-    isim = "emre".clear
-    puts isim
 =end
-# .chop  sondan bir önceki karakteri siler
+# .divmod bölüm ve kalanı verir
 =begin
-    isim = "emre"
-    puts isim.chop
-    puts isim
-    puts isim.chop!
-    puts isim
+    sayi = 6.divmod(2)
+    puts sayi[0]
+    puts sayi[1]
 =end
-# .count belirtilen karakterleri sayar
+# .even sayi tek mi çift mi
 =begin
-    isim = "emre inanoglu"
-    puts isim.count("e")
+    sayi = 7
+    puts sayi.even?
+    sayi = 8
+    puts sayi.even?
 =end
-# .delete belirtilen karakterleri kaldırır
+# .eql? hem tür hem değer eşitmi
 =begin
-    isim = "emre inanoglu"
-    puts isim.delete("e")
-    puts isim
-    puts isim.delete!("e")
-    puts isim
+    puts 1.eql?(1.0)
 =end
-# .downcase  .upcase tamamını büyük yada küçük yapar
+# .fdiv kesirli bölüm yapar 
 =begin
-    isim ="Emre İnAnoglu"
-    puts isim.downcase
-    puts isim.upcase
-    puts isim
-    puts isim.downcase!
-    puts isim
+    puts 4.fdiv(2.2)
 =end
-# .each_char belirtilen karakteri her karakterden sonra ekler
+# .inspect dizi içindeki farklı türlerin hepsini consola yazar
 =begin
-    isim ="emre"
-    isim.each_char{|k| print k, '_'}
+    n = ["a",5,2.3]
+    puts n.inspect
 =end
-# .empty?  boş mu değilmi 
+# .gcd ebob
 =begin
-    isim = ""
-    puts isim.empty?
-    isim = "emre"
-    puts isim.empty?
+    puts 120.gcd(30)
 =end
-# .gsub 
+# .integer? tamsayı olup olmama durumunu kontrol eder
 =begin
-    isim ="emre"
-    puts isim.gsub("e","o")
+    puts 10.integer?
 =end
-# .include? belirtilen karakterin olup olmadığına bakar
+# .modulo kalanı verir 
 =begin
-    isim = "emre"
-    puts isim.include?("e")
-    puts isim.include?("y")
+    puts 10.modulo(3)
 =end
-# .index varsa metnin indexini yoksa nil döner
+# .nan sayı mı değilmi
 =begin
-    isim ="emre"
-    puts isim.index("r")
-    puts isim.index("y")
+    a=10.0
+    puts a.nan?
+    b=6.0/0.0
+    puts b.nan?
 =end
-# .insert metne belirtilen konuma ekleme yapar
+# .negative? negatif mi değilmi
 =begin
-    isim = "emre"
-    puts isim.insert(0,'a')
+    puts -9.negative?
 =end
-# .length kaç karakter var onu söyler
+# .next sonraki tamsayı
 =begin
-    isim = "emre inanoglu"
-    puts isim.length
+    puts 10.next
 =end
-# .lstrip rstrip strip boşlukları siler
+# .nanzero 0 ise nil değilse kendisi
 =begin
-    isim = "            emre inanoglu    "
-    puts isim.strip
-    puts isim.lstrip
-    puts isim.rstrip
-    puts isim
-    puts isim.strip!
-    puts isim
+    puts 1.nonzero?
+    puts 0.nonzero?
 =end
-# .reverse terse çevirir
+# .odd tekmi değilmi
 =begin
-    isim = "emre"
-    puts isim.reverse
-    puts isim
-    puts isim.reverse!
-    puts isim
+    a=9
+    puts a.odd?
 =end
-# .scan belirtilen regexp den ayırır
+# .ord ascii kod karşılığını verir
 =begin
-    isim = "emre merhaba naber"
-    puts isim.scan(/\w+/)
+    puts "a".ord
 =end
-# .slice belirtilen sayılar aralığındakini gösterir
+# .pred 1 eksiğini verir
 =begin
-    isim ="emre inanoglu"
-    puts isim.slice(2,7)
+    puts 0.pred
 =end
-# .split belirtilen karakterden sonra ayırır
+# .positive? sayının pozitif mi değil mi onu verir
 =begin
-    isim = "emre inanoglu"
-    puts isim.split(" ")
+    puts 5.positive?
 =end
-# .sub aranan karaktere istediğin karakter ile sarmalar
+# .rectangular 
 =begin
-    isim ="emre inanoglu"
-    puts isim.sub(/([iou])/,'(\0)')
+    r = 1,3,-2,8.rectangular()
+    puts r.inspect
 =end
-# .to_sym metni sembole çevirir to_s,to_i
+# .remainder bölümden kalanı verir
 =begin
-    puts "emre".to_sym
+    puts 9.remainder(5)
 =end
-
+# .round ondalıklı kısmın virgülden sonra kaç adet
+=begin
+    puts 3.45897.round(2)
+=end
+# .size bellekte ne kadar yer kaplar
+=begin
+    a = 9
+    b ="emre"
+    puts a.size
+    puts b.size
+=end
+# .succ tamsayılarda bir fazlası
+=begin
+    puts 1.succ
+=end
+# .truncate ondalıklı sayının tam kısmını verir
+=begin
+    puts 1.6589.truncate
+=end
+# .zero? sonuç sıfır mı
+=begin
+    a = 0
+    puts a.zero?
+=end
