@@ -70,3 +70,43 @@ end
 10.step(1,-2) do |i|
     puts i
 end
+
+# loop do döngüsü
+
+i=0
+loop do
+    puts i
+    i+=1
+    break if i>5000
+end
+
+# each do döngüsü
+
+(1..10).each do
+    puts "merhaba"
+end
+
+(0...10).each do |i|
+    puts "merhaba #{i}"
+end
+
+i=0
+while i<10
+    puts i
+    i+=1
+    break if i==5
+end
+
+5.times do |k|
+    next if k==3
+    puts k
+end
+
+(0..5).each do |i|
+    if i>4 && i<10
+        puts "değer : #{i}"
+        i+=1
+        redo
+    end
+    puts "değer : #{i}"
+end
