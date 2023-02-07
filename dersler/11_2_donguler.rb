@@ -1,4 +1,14 @@
 # for döngüsü
+# while döngüsü
+# until döngüsü
+# downto döngüsü
+# upto döngüsü
+# times döngüsü
+# step döngüsü
+# loop do döngüsü
+# each do döngüsü
+
+# for döngüsü
 
 for degisken in 1..10
     puts degisken
