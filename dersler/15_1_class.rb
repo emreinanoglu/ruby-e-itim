@@ -15,6 +15,36 @@ end
 saat = KolSaati.new("Siyah", "Metal")
 puts saat.saati_goster
 
+class Selamlama
+    def merhaba(isim = "Yabancı")
+        puts "Merhaba #{isim}"
+    end
+end
+a = Selamlama.new()
+a.merhaba
+a.merhaba("Emre")
+
+# Aşağıdaki satır çalışmaz self yada class ismi yazmadık erişemeyiz
+# Selamlama.merhaba
+
+class Selamlama2
+    def self.merhaba(isim = "Yabancı")          #burada Selamlama2.merhaba da olur
+        puts "Merhaba #{isim}"
+    end
+end
+Selamlama2.merhaba
+Selamlama2.merhaba("Emre")
+
+class Selamlama3
+    class << self
+        def merhaba(isim = "Yabancı")          #burada Selamlama2.merhaba da olur
+            puts "Merhaba #{isim}"
+        end
+    end
+end
+Selamlama3.merhaba
+Selamlama3.merhaba("Emre")
+
 class CepTelefonu
     def initialize(renk, bellek, cpu_cekirdek)
         @renk = renk
