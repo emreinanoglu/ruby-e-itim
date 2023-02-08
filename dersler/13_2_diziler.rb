@@ -50,3 +50,13 @@ puts bosDizi.inspect
 puts bosDizi.sort!().inspect             # ! var
 puts bosDizi.inspect
 puts bosDizi.sort!().reverse.inspect     # tersten sıralama yapar
+
+ay_hafta = [['ocak','şubat','mart','nisan','mayıs'],[1,2,3,4,5]]
+puts "#{ay_hafta[0][1]} ayının #{ay_hafta[1][2]}"
+
+# dizi metodları
+# .at, .clear, .collect!, .combination, .compact!, .concat, .count 
+# .delete, .delete_at, .delete_if, .drop, .drop_while, .each, .each_index 
+# .empty?, .fill, .first, .flatten!, .include?, .index, .insert, .join, .keep_if 
+# .last, .length, .map!, .pop, .push, .replace, .reverse!, .shift, .shuffle!, .size 
+# slice!, .sort!, .uniq!, .unshift, .zip 
